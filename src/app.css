@@ -33,8 +33,25 @@ body {
 }
 
 h1 {
+  font-style: italic;
+  background-size: 20%;
+  color: rgb(173, 32, 32);
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 2.1;
+}
+
+h2{
+font-style: oblique;
+}
+
+h3{
+font-size: x-large;
+font-style: initial;
+color: #646cff;
+}
+
+h4{
+  background-image: url("https://as01.epimg.net/meristation/imagenes/2020/02/13/header_image/325721831581622551.jpg");
 }
 
 .card {
@@ -42,7 +59,7 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -50,7 +67,7 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px black;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -76,10 +93,77 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #cd4a4a;
+    border-color: #747bff;
   }
 }
 img{
-  width: 50%;
+  width: 40%;
+  height: 40%;
+}
+article{
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 16px;
+}
+input{
+  width: 55%;
   height: 50%;
+}
+div{
+  border-color: #1a1a1a;
+}
+*{
+  box-sizing: border-box;
+}
+ 
+.loader-container{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+ 
+.loader-container .loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  border: solid 4px transparent;
+  border-top-color: #f1dd08;
+  border-left-color: #f1dd08;
+  border-radius: 50%;
+  animation: loader 1.4s linear infinite;
+}
+ 
+.loader-container .loader2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  border: solid 4px transparent;
+  border-top-color: #f1dd08;
+  border-left-color: #f1dd08;
+  border-radius: 50%;
+  animation: loader2 1.2s linear infinite;
+}
+ 
+@keyframes loader{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+ 
+@keyframes loader2{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }

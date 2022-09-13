@@ -1,6 +1,6 @@
 <script>
 import { each } from "svelte/internal";
-import personaje from './Personaje.svelte'
+import Loader from "./Loader.svelte"
 
 let value = ''
 let bool = false
@@ -14,6 +14,7 @@ $: if(bool == true) {
     .then(res => res.json())
     .then(apiResponse =>{
         response = apiResponse.data.results || []
+        console.log(response)
     })
     bool = false
 }
@@ -37,28 +38,27 @@ on:input={handleInput}
     {#if response.length > 0}
         {#each response as personaje}
         <div>
-            <strong>{personaje.name}</strong>
+            <h3>
+                <strong>{personaje.name}</strong>
+            </h3> 
         </div>
         <div>
-            {personaje.description}
+            <h2>
+                {personaje.description}
+            </h2> 
         </div>
             <article>
                 <img alt = {personaje.description} src = {personaje.thumbnail.path}.{personaje.thumbnail.extension}/>
             </article>     
         {/each}
         {:else}
+        <div>
             <strong>Sin resultados</strong>
+        </div>  
         {/if}
 {/if}
 
-<style>
-    article{
-        border: 1px solid #eee;
-        border-radius: 4px;
-        padding: 16px;
-    }
 
-</style>
 
 
 
