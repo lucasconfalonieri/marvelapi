@@ -56,9 +56,9 @@ on:input={handleInput}
             </article>     
         {/each}
     {/if}
-    {#if response}
+    {#if response && response.length == 0}
         <div>
-            <br><strong>Sin resultados</strong>
+            <br><strong>Sin resultados. Intente nuevamente</strong>
         </div>  
     {/if}
 {/if}
