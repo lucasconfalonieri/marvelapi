@@ -17,25 +17,19 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: white;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-style: italic;
   background-size: 20%;
-  color: rgb(173, 32, 32);
+  color: white;
   font-size: 3.2em;
   line-height: 2.1;
 }
@@ -47,11 +41,14 @@ font-style: oblique;
 h3{
 font-size: x-large;
 font-style: initial;
-color: #646cff;
+color: white;
 }
 
-h4{
-  background-image: url("https://as01.epimg.net/meristation/imagenes/2020/02/13/header_image/325721831581622551.jpg");
+small{
+  font-style: oblique;
+  color: white;
+  font-size: medium;
+  border: 2px black;
 }
 
 .card {
@@ -76,25 +73,23 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: white;
+    font-size: smaller;
     background-color: #ffffff;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #cd4a4a;
-    border-color: #747bff;
+    background-color: white;
+    color: rgb(42, 153, 190);
+    border-color: lightcyan;
+    font-style: italic;
   }
 }
 img{
@@ -122,6 +117,7 @@ div{
   width: 60px;
   height: 60px;
   margin: 10px;
+  margin: 0 auto;
 }
  
 .loader-container .loader{
@@ -131,8 +127,8 @@ div{
   width: 60%;
   height: 60%;
   border: solid 4px transparent;
-  border-top-color: #f1dd08;
-  border-left-color: #f1dd08;
+  border-top-color: white;
+  border-left-color: white;
   border-radius: 50%;
   animation: loader 1.4s linear infinite;
 }
@@ -144,8 +140,8 @@ div{
   width: 40%;
   height: 40%;
   border: solid 4px transparent;
-  border-top-color: #f1dd08;
-  border-left-color: #f1dd08;
+  border-top-color: white;
+  border-left-color: white;
   border-radius: 50%;
   animation: loader2 1.2s linear infinite;
 }
